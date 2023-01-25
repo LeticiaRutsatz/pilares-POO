@@ -1,11 +1,16 @@
-class Pessoa5 {
+import { Departamento } from "./departamento";
+import { UniversidadeUni } from "./universidade";
+
+export class PessoaUni {
     private nome: string;
     private dataDeNascimento: string;
-    private universidade!: Universidade5;
-    private departamento!: Departamento;
+    private universidade: UniversidadeUni;
+    private departamento: Departamento;
   
-    constructor(nome: string, dataDeNascimento: string) {
+    constructor(nome: string, dataDeNascimento: string, universidade: UniversidadeUni, departamento: Departamento) {
       this.nome = nome;
+      this.universidade = universidade;
+      this.departamento = departamento;
       this.dataDeNascimento = dataDeNascimento;
     }
   
@@ -17,11 +22,11 @@ class Pessoa5 {
       return this.dataDeNascimento;
     }
   
-    getUniversidade(): Universidade5 {
+    getUniversidade(): UniversidadeUni {
       return this.universidade;
     }
   
-    setUniversidade(universidade: Universidade5): void {
+    setUniversidade(universidade: UniversidadeUni): void {
       this.universidade = universidade;
     }
   
@@ -36,7 +41,7 @@ class Pessoa5 {
     ImprimirDados() : void{
       console.log(`Nome: ${this.nome}`);
       console.log(`Data Nasc: ${this.dataDeNascimento}`);
-      console.log(`Universidade: ${this.universidade.getNome()} - ${this.universidade.getLocal()}`);
-      console.log(`Departamento: ${this.departamento.getNome()}`)
+      console.log(`Universidade: ${this.universidade.getNome} - ${this.universidade.getLocal}`);
+      console.log(`Departamento: ${this.departamento.getNome}`)
     }
 }

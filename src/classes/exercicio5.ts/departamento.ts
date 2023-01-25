@@ -1,4 +1,4 @@
-class Departamento {
+export class Departamento {
     private nome: string;
   
     constructor(nome: string) {

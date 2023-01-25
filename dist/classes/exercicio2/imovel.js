@@ -1,3 +1,4 @@
+"use strict";
 /*2. Crie a classe Imovel, que possui um endereço e um preço.
 a. crie uma classe Novo, que herda Imovel e possui um adicional
 no preço. Crie métodos de acesso e impressão deste valor
@@ -5,13 +6,12 @@ adicional.
 b. crie uma classe Velho, que herda Imovel e possui um desconto
 no preço. Crie métodos de acesso e impressão para este
 desconto.*/
-
-export class Imovel {
-    protected _preco: number;
-    private endereco: string;
-
-    constructor(preco: number, endereco: string) {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Imovel = void 0;
+class Imovel {
+    constructor(preco, endereco) {
         this._preco = preco;
         this.endereco = endereco;
     }
 }
+exports.Imovel = Imovel;

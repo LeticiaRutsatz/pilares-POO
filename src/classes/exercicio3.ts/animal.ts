@@ -3,10 +3,10 @@
 comportamento diferente para cada animal.*/
 
 export abstract class Animal {
-    protected nome: string;
-    protected cor: string;
-    protected especie: string;
-    protected idade: number;
+    private nome: string;
+    private cor: string;
+    private especie: string;
+    private idade: number;
 
     constructor(nome: string, cor: string, especie: string, idade: number){
         this.nome = nome;
@@ -14,6 +14,24 @@ export abstract class Animal {
         this.especie = especie;
         this.idade = idade;
     }
+
+    get getNome(){
+        return this.nome;
+    }
+
+    get getCor(){
+        return this.cor;
+    }
+
+    get getEspecie(){
+        return this.especie;
+    }
+
+    get getIdade(){
+        return this.idade;
+    }
+
+    
 
     Andar(){
         return console.log("andando")

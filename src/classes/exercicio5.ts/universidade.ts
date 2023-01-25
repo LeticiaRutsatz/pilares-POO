@@ -1,4 +1,6 @@
-class Universidade5 {
+import { Departamento } from "./departamento";
+
+export class UniversidadeUni {
     private nome: string;
     private local: string;
     private departamentos: Departamento[];

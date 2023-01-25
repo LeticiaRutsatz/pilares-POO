@@ -1,3 +1,4 @@
+"use strict";
 /*1. Crie uma classe abstrata chamada Ingresso que possui um valor
 em reais e um método imprimeValor()
 a. crie uma classe Normal, que herda Ingresso..
@@ -7,15 +8,14 @@ do ingresso somado com o adicional.
 c. crie uma classe Camarote, que herda ingresso e possui um
 valor adicional. Altere o método imprimeValor para mostrar o
 valor do ingresso somado com o adicional.*/
-
-export abstract class Ingresso {
-    protected _valor: number;
-
-    constructor(valor: number) {
-        this._valor = valor;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Ingresso = void 0;
+class Ingresso {
+    constructor() {
+        this._valorIngresso = 20;
     }
-
-    imprimeValor(){
-        return console.log(this._valor)
+    imprimeValor() {
+        console.log(`Valor ingresso ${this._valorIngresso}`);
     }
 }
+exports.Ingresso = Ingresso;
